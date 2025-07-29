@@ -89,7 +89,8 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <Image src="/logo.jpg" alt="NeoNest" width={60} height={60} />
+              {/* adding pulse animation on logo */}
+              <Image className="animate-pulse" src="/logo.jpg" alt="NeoNest" width={60} height={60} />
               <span className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent ml-2">
                 NeoNest
               </span>
@@ -111,10 +112,10 @@ const Navbar = () => {
                 <Link
                   key={label}
                   href={path}
-                  className={`transition-colors capitalize ${
+                  className={`transition-colors p-1.5 hover:p-3 hover:bg-pink-500 hover:text-white shadow-lg hover:shadow-pink-400/50 rounded-full capitalize ${
                     pathname === path
-                      ? "text-pink-600"
-                      : "text-gray-600 hover:text-pink-600"
+                      ? "text-white bg-pink-500 rounded-full text-lg shadow-pink-400/50 "
+                      : "text-gray-600"
                   }`}
                 >
                   {label}

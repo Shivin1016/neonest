@@ -18,7 +18,7 @@ const Footer = () => {
                 alt="NeoNest Logo"
                 width={40}
                 height={40}
-                className="object-contain -mt-1.5"  
+                className="object-contain -mt-1.5 animate-pulse"  
               />
               <span className="font-semibold text-lg mb-2">NeoNest</span>
             </div>
