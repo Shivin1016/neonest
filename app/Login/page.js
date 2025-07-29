@@ -91,7 +91,7 @@ export default function LoginPage() {
       };
 
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/login`,
+        "/api/auth/login",
         credentials, 
       );
 

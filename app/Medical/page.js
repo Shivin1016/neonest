@@ -89,7 +89,7 @@ export default function VaccineTracker({ babyId }) {
   const fetchVaccines = async () => {
     try {
       const token = getAuthToken()
-      const res = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/vaccine`, {
+      const res = await axios.get("/api/vaccine", {
         headers: { Authorization: `Bearer ${token}` },
       })
       setVaccines(res.data)

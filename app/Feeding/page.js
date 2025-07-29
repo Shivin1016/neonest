@@ -36,7 +36,7 @@ export default function Page() {
   useEffect(() => {
     const fetchSchedules = async () => {
       try {
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/feeding`, {
+        const res = await axios.get("/api/feeding", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
