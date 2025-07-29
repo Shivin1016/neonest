@@ -46,10 +46,11 @@ const NewsletterContent = () => {
 
 const AppStatsContent = () => {
   const stats = [
-    { icon: <Baby className="text-pink-500" />, label: "Babies Tracked", value: "1,200+" },
-    { icon: <Bot className="text-blue-500" />, label: "AI Responses", value: "25,000+" },
-    { icon: <Smile className="text-yellow-500" />, label: "Avg. Rating", value: "4.8/5" },
-    { icon: <Users className="text-green-500" />, label: "Happy Parents", value: "950+" },
+    // animation
+    { icon: <Baby className="text-pink-500 animate-bounce" />, label: "Babies Tracked", value: "1,200+" },
+    { icon: <Bot className="text-blue-500 animate-bounce" />, label: "AI Responses", value: "25,000+" },
+    { icon: <Smile className="text-yellow-500 animate-bounce" />, label: "Avg. Rating", value: "4.8/5" },
+    { icon: <Users className="text-green-500 animate-bounce" />, label: "Happy Parents", value: "950+" },
   ];
 
   return (

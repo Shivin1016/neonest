@@ -464,7 +464,8 @@ useEffect(() => {
               <div className="text-center md:text-right">
                 <Button
                   variant="outline"
-                  className="text-pink-600 border-pink-400 font-semibold hover:bg-pink-50 px-6 py-2 rounded-full"
+                  // added box-shadow and hover effect
+                  className="text-pink-600 border-pink-400 font-semibold hover:bg-pink-500 hover:text-white hover:scale-105 px-6 py-2 rounded-full shadow-lg hover:shadow-pink-400"
                   onClick={handleAddReviewClick}
                 >
                   + Add Your Review
@@ -506,7 +507,8 @@ useEffect(() => {
                 return (
                   <Card
                     key={index}
-                    className="bg-white/90 border border-gray-200 shadow-md p-4 rounded-xl"
+                    // hover effect added on cards review
+                    className="bg-white/90 border border-gray-200 shadow-md p-4 rounded-xl hover:scale-105 hover:shadow-lg"
                   >
                     <CardHeader className="p-0 mb-3">
                       <CardTitle className="text-lg text-gray-800 font-semibold">

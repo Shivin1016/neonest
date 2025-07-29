@@ -91,24 +91,25 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-2">Contact</h4>
             <div className="space-y-3 text-sm text-gray-400">
+              {/* hover scale effect added on all icons */}
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4 hover:scale-105" />
                 <span>support@babycare.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 hover:scale-105" />
                 <span>1-800-BABY-CARE</span>
               </div>
                <div className="flex items-center gap-2">
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-4 h-4 hover:scale-105" />
                 <span>@neonestofficial</span>
               </div>
                <div className="flex items-center gap-2">
-                <Facebook className="w-4 h-4" />
+                <Facebook className="w-4 h-4 hover:scale-105" />
                 <span>@neonestofficial</span>
               </div>
                <div className="flex items-center gap-2">
-                <Twitter className="w-4 h-4" />
+                <Twitter className="w-4 h-4 hover:scale-105" />
                 <span>@neonestofficial</span>
               </div>
             </div>
