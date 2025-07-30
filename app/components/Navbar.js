@@ -112,10 +112,10 @@ const Navbar = () => {
                 <Link
                   key={label}
                   href={path}
-                  className={`transition-colors p-1.5 hover:p-3 hover:bg-pink-500 hover:text-white shadow-lg hover:shadow-pink-400/50 rounded-full capitalize ${
+                  className={`transition-colors p-1.5 capitalize ${
                     pathname === path
-                      ? "text-white bg-pink-500 rounded-full text-lg shadow-pink-400/50 "
-                      : "text-gray-600"
+                      ? " text-pink-600 "
+                      : "text-gray-600 hover:text-pink-600 hover:scale-105"
                   }`}
                 >
                   {label}
