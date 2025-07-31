@@ -1,0 +1,28 @@
+/* TypingEffect.css */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid black;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3s steps(31,end) forwards, blink 0.7s step-end infinite  ;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to{
+    width: 31ch;
+  } 
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent;
+  }
+}

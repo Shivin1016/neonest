@@ -26,6 +26,7 @@ import { Button } from "./ui/Button";
 import Image from "next/image";
 import NewSections from "./Newsections";
 import { Toaster, toast } from 'sonner';
+import "./custom.css"; // <-- Import custom CSS
 
 const Homepage = () => {
   const [showReviewPrompt, setShowReviewPrompt] = useState(false);
@@ -254,8 +255,8 @@ useEffect(() => {
       <div className={`${showWelcomeOverlay ? 'pointer-events-none' : ''}`}>
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto text-center max-w-6xl">
-            <div className="mb-10">
-              <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent leading-tight">
+            <div className="mb-10 ">
+              <h1 className="text-5xl typewriter md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent leading-tight">
                 Your Baby's First Year Journey
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -298,7 +299,8 @@ useEffect(() => {
               <Card className="group hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm cursor-pointer border-none rounded-xl p-4">
                 <CardHeader className="p-0 mb-4">
                   <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Utensils className="w-6 h-6 text-pink-600" />
+                    {/* rotate on hover */}
+                    <Utensils className="w-6 h-6  hover:animate-spin  text-pink-600" />
                   </div>
                   <CardTitle className="group-hover:text-pink-600 transition-colors text-xl font-semibold">
                     Feeding Schedule
@@ -312,7 +314,8 @@ useEffect(() => {
               <Card className="group hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm cursor-pointer border-none rounded-xl p-4">
                 <CardHeader className="p-0 mb-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Package className="w-6 h-6 text-blue-600" />
+                    {/* bounce on hover */}
+                    <Package className="w-6 h-6 hover:animate-bounce text-blue-600" />
                   </div>
                   <CardTitle className="group-hover:text-blue-600 transition-colors text-xl font-semibold">
                     Inventory Tracker
@@ -326,7 +329,8 @@ useEffect(() => {
               <Card className="group hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm cursor-pointer border-none rounded-xl p-4">
                 <CardHeader className="p-0 mb-4">
                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Camera className="w-6 h-6 text-purple-600" />
+                    {/* added sclae tranform */}
+                    <Camera className="w-6 h-6 hover:scale-110 transition-transform duration-300 text-purple-600" />
                   </div>
                   <CardTitle className="group-hover:text-purple-600 transition-colors text-xl font-semibold">
                     Memory Vault
@@ -340,7 +344,8 @@ useEffect(() => {
               <Card className="group hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm cursor-pointer border-none rounded-xl p-4">
                 <CardHeader className="p-0 mb-4">
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Shield className="w-6 h-6 text-green-600" />
+                    {/* shadow plus scale */}
+                    <Shield className="w-6 h-6 hover:scale-110 hover:shadow-lg transition-transform duration-300 text-green-600" />
                   </div>
                   <CardTitle className="group-hover:text-green-600 transition-colors text-xl font-semibold">
                     Vaccine Tracker
@@ -354,7 +359,8 @@ useEffect(() => {
               <Card className="group hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm cursor-pointer border-none rounded-xl p-4">
                 <CardHeader className="p-0 mb-4">
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <PlayCircle className="w-6 h-6 text-orange-600" />
+                    {/* pulse effect added on hover */}
+                    <PlayCircle className="w-6 h-6 hover:animate-pulse text-orange-600" />
                   </div>
                   <CardTitle className="group-hover:text-orange-600 transition-colors text-xl font-semibold">
                     Parent Resources
@@ -368,7 +374,8 @@ useEffect(() => {
               <Card className="group hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm cursor-pointer border-none rounded-xl p-4">
                 <CardHeader className="p-0 mb-4">
                   <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <HelpCircle className="w-6 h-6 text-teal-600" />
+                    {/* ping animation added on hover */}
+                    <HelpCircle className="w-6 h-6 hover:animate-ping text-teal-600" />
                   </div>
                   <CardTitle className="group-hover:text-teal-600 transition-colors text-xl font-semibold">
                     FAQs

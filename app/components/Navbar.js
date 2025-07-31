@@ -8,7 +8,7 @@ import { Button } from "./ui/Button";
 import Chatbot from "./Chatbot";
 import { useAuth } from "../context/AuthContext";
 import { useChatStore } from "@/lib/store/chatStore";
-import { Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react"; 
 
 const tabs = [
   { label: "home", path: "/" },
@@ -87,12 +87,10 @@ const Navbar = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center"> 
+            <div className="flex items-center">
               {/* adding pulse animation on logo */}
               <Image className="animate-pulse" src="/logo.jpg" alt="NeoNest" width={60} height={60} />
-              <span className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent ml-2">
-                NeoNest
-              </span> 
+              <span className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent ml-2">NeoNest</span>
             </div>
 
             {/* Hamburger - Mobile */}
@@ -105,15 +103,7 @@ const Navbar = () => {
             {/* Nav - Desktop */}
             <nav className="hidden md:flex items-center gap-4">
               {tabs.map(({ label, path }) => (
-                <Link
-                  key={label}
-                  href={path}
-                  className={`transition-colors p-1.5 capitalize ${
-                    pathname === path
-                      ? " text-pink-600 "
-                      : "text-gray-600 hover:text-pink-600 hover:scale-105"
-                  }`}
-                >
+                <Link key={label} href={path} className={`transition-colors p-1.5 capitalize ${pathname === path ? " text-pink-600 " : "text-gray-600 hover:text-pink-600 hover:scale-105"}`}>
                   {label}
                 </Link>
               ))}
