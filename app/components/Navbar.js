@@ -146,11 +146,15 @@ const Navbar = () => {
               <div className="mt-3 flex flex-col gap-2">
                 {!isAuth ? (
                   <>
-                    <Button className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white">
-                      <Link href="/Login">Login</Link>
+                    <Button asChild className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white">
+                      <Link href="/Login" onClick={() => setMenuOpen(false)}>
+                        Login
+                      </Link>
                     </Button>
-                    <Button className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white">
-                      <Link href="/Signup">Signup</Link>
+                    <Button asChild className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white">
+                      <Link href="/Signup" onClick={() => setMenuOpen(false)}>
+                        Signup
+                      </Link>
                     </Button>
                   </>
                 ) : (
